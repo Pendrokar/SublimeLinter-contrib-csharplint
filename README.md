@@ -5,6 +5,10 @@ SublimeLinter-contrib-csharplint
 
 A linter(software) called 'csharplint' does not exist, this simply uses Mono or the C# framework available on Windows.
 
+![C# error example](https://lh5.googleusercontent.com/-8SLnmiT3Uzw/VD1Wzt1czQI/AAAAAAAABbg/a63CSip0xt0/w813-h396-no/csharplinter.png)
+
+![Unity C# Warning](https://lh4.googleusercontent.com/-9TlxxCqwPoU/VD1Wzhr9PhI/AAAAAAAABbc/9gxZ9ViXMMc/w895-h398-no/unitycsharplinter.png)
+
 ## Everything after this sentence is the default README that is created by Sublime Linter 3:
 
 ## Installation
