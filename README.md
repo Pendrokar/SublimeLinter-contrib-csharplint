@@ -3,7 +3,9 @@ SublimeLinter-contrib-csharplint
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-csharplint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-csharplint)
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [csharplint](__linter_homepage__). It will be used with files that have the “__syntax__” syntax.
+A linter(software) called 'csharplint' does not exist, this simply uses Mono or the C# framework available on Windows.
+
+## Everything after this sentence is the default README that is created by Sublime Linter 3:
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
