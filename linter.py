@@ -29,10 +29,11 @@ class Csharplint(Linter):
     base_cmd = (
         "mcs "
         " *"
-        " -target:library "
-        #" -out:/tmp/errorcheck.dll"
-        " -out:stdout"
+        " -target:library"
+        " -out:/tmp/errorcheck.dll"
+        #" -out:stdout" doesn't work like that
         #" sdk:3.5" # Unity uses .NET 3.5
+        #" -r:./*.dll" # Recursively add all libraries within the folder of file
     )
     regex = (
         r'^(?P<filename>.+\.cs)\((?P<line>\d+),(?P<col>\d+)\): (?:(?P<error>error)|(?P<warning>warning)) \w+: (?P<message>.+)'
@@ -90,7 +91,8 @@ class Csharplint(Linter):
         if len(extra) == 0:
             return result
 
-        result += " -nostdlib" # Unity has its own
+        #result += ","
+        result += " -r:"
 
         newextra = []
         window = sublime.active_window()
@@ -100,10 +102,11 @@ class Csharplint(Linter):
         cmd = ""
         q = "\""
 
-        result += " -r:"
         result += ','.join([shlex.quote(newextra) for newextra in extra])
-        print("Result: $ '" + result + "'")
+        #print("Result: $ '" + result + "'")
         #result += "%s%s%s" % (q, ";;--;;".join(extra), q)
+        #
+        result += " -nostdlib" # Unity has its own
 
         return result
 
