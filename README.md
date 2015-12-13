@@ -23,13 +23,17 @@ Once you have installed and configured `csharplint`, you can proceed to install 
 Currently the package is set very specifically for a Window's user and has no configuration options. Please modify at the linter.py file according to your needs.
 
 ### Plugin installation
+This package is not an official SublimeLinter package hence the 'contrib' notation and also not added to the main Package repository. You may add this Git as the repository.
+
 Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
 
-To install via Package Control*(Unavailable)*, do the following:
+To install via Package Control, do the following:
+
+1. Within Sublime Text, bring up the [Command Palette][cmd] and type `add repository`. Among the commands you should see `Package Control:Add Repository`. Select it. Then enter https://github.com/Pendrokar/SublimeLinter-contrib-csharplint
 
 1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
-2. When the plugin list appears, type `csharplint`. Among the entries you should see `SublimeLinter-contrib-csharplint`. If that entry is not highlighted, use the keyboard or mouse to select it.
+1. When the plugin list appears, type `csharplint`. Among the entries you should see `SublimeLinter-contrib-csharplint`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
