@@ -27,7 +27,7 @@ class Csharplint(Linter):
     syntax = ("c#", "unityc#")
 
     base_cmd = (
-        "mcs "
+        "gmcs.bat "
         " *"
         " -target:library"
         " -out:/tmp/errorcheck.dll"
@@ -118,7 +118,7 @@ class Csharplint(Linter):
                 return s.get(key)
         except:
             pass
-        return self.get_settings().get(key, default)
+        return self.get_view_settings().get(key, default)
 
     def expand_path(self, value, window=None, checkExists=True):
         if window == None:
